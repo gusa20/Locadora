@@ -1,0 +1,42 @@
+@model Locadora.Models.Diretor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Diretor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrimeiroFilme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataPrimeiroFilme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUltimoFilme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataUltimoFilme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumPremios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumPremios)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
