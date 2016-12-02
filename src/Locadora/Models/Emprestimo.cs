@@ -11,7 +11,7 @@ namespace Locadora.Models
         public DateTime DataDevolucao { get; set; }
         //Cliente
         public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
         public Midia Midia { get; set; }
         public StatusEmprestimo _statusEmprestimo { get; set; }
         public enum StatusEmprestimo

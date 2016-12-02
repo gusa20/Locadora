@@ -13,7 +13,7 @@ namespace Locadora.Models
         public String Nome { get; set; }
         public DateTime DataAdesao { get; set; }
         public StatusCliente _statusCliente { get;set; }
-        public ICollection<Emprestimo> Emprestimos { get; set; }
+        public virtual ICollection<Emprestimo> Emprestimos { get; set; }
         public enum StatusCliente
         {
             ComAtraso, OK

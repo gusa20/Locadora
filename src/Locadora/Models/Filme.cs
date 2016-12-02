@@ -22,6 +22,11 @@ namespace Locadora.Models
         public int DiretorId { get; set; }
         public virtual Diretor Diretor { get; set; }
         public CultureInfo Idioma { get; set; }
+        public string TwoLetterISOLanguageName
+        {
+            get { return Idioma == null ? null : Idioma.TwoLetterISOLanguageName; }
+            set { Idioma = new CultureInfo(value); }
+        }
         public virtual ICollection<Midia> Midias { get; set; }
     }
 }
