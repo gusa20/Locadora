@@ -24,7 +24,7 @@ namespace Locadora.Controllers
         {
             return View(await _context.Cliente.ToListAsync());
         }
-
+        
         // GET: Clientes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -33,7 +33,8 @@ namespace Locadora.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Cliente.SingleOrDefaultAsync(m => m.Id == id);
+            var cliente = await _context.Cliente.Include(cl => cl.Emprestimos).SingleOrDefaultAsync(m => m.Id == id);
+            
             if (cliente == null)
             {
                 return NotFound();

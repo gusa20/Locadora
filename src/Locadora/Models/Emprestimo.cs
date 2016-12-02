@@ -12,7 +12,8 @@ namespace Locadora.Models
         //Cliente
         public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
-        public Midia Midia { get; set; }
+        public int MidiaId { get; set; }
+        public virtual Midia Midia { get; set; }
         public StatusEmprestimo _statusEmprestimo { get; set; }
         public enum StatusEmprestimo
         {
