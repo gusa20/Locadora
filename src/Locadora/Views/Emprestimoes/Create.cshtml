@@ -1,0 +1,54 @@
+@model Locadora.Models.Emprestimo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Emprestimo</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="ClienteId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataDevolucao" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DataDevolucao" class="form-control" />
+                <span asp-validation-for="DataDevolucao" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MidiaId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="MidiaId" class ="form-control" asp-items="ViewBag.MidiaId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="_statusEmprestimo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="_statusEmprestimo" class="form-control"></select>
+                <span asp-validation-for="_statusEmprestimo" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

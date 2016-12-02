@@ -1,0 +1,75 @@
+@model Locadora.Models.Filme
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Filme</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="DataEstreia" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DataEstreia" class="form-control" />
+                <span asp-validation-for="DataEstreia" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DiretorId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="DiretorId" class ="form-control" asp-items="ViewBag.DiretorId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EstudioId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="EstudioId" class ="form-control" asp-items="ViewBag.EstudioId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Nome" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumPremios" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumPremios" class="form-control" />
+                <span asp-validation-for="NumPremios" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TwoLetterISOLanguageName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TwoLetterISOLanguageName" class="form-control" />
+                <span asp-validation-for="TwoLetterISOLanguageName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="_genero" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="_genero" class="form-control"></select>
+                <span asp-validation-for="_genero" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
