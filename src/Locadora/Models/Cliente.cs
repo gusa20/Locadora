@@ -16,7 +16,7 @@ namespace Locadora.Models
         public virtual ICollection<Emprestimo> Emprestimos { get; set; }
         public enum StatusCliente
         {
-            ComAtraso, OK
+            OK, ComAtraso
         }
     }
 }
