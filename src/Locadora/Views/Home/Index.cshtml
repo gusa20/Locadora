@@ -7,21 +7,26 @@
         <h1 class="text-center">Bem vindo, gerente da locadora!</h1>
     </div>
     <div class="col-md-12 col-sm-12">
-        <div class="jumbotron col-md-4 col-sm-4 mb">
+        <div class="jumbotron col-md-3 col-sm-3 mb">
             <h2>Clientes cadastrados: @ViewData["count"]</h2>
         </div>
 
-        <div class="jumbotron col-md-4 col-sm-4 mb">
-            <h2>Filmes no acervo da locadora: @ViewData["countMidias"]</h2>
+        <div class="jumbotron col-md-3 col-sm-3 mb">
+            <h2>Filmes na locadora: @ViewData["countMidias"]</h2>
         </div>
 
-        <div class="jumbotron col-md-4 col-sm-4 mb">
+        <div class="jumbotron col-md-3 col-sm-3 mb">
             <h2>Filmes emprestados: @ViewData["countMidiasEmprestadas"]</h2>
+        </div>
+
+        <div class="jumbotron col-md-3 col-sm-3 mb">
+            <h2>Faturamento da semana: R$ @ViewData["faturamentoAteUltimaSemana"]</h2>
         </div>
     </div>
     <div class="col-md-12" align="center">
         <a class="btn btn-primary" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
         <a class="btn btn-primary" asp-area="" asp-controller="Ators" asp-action="Index">Ver Atores Disponíveis</a>
         <a class="btn btn-primary" asp-area="" asp-controller="Diretors" asp-action="Index">Ver Diretores Disponíveis</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Filmes" asp-action="Index">Ver Filmes</a>
     </div>
 </div>

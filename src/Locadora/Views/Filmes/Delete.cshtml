@@ -1,0 +1,56 @@
+@model Locadora.Models.Filme
+
+@{
+    ViewData["Title"] = "Apagar filme";
+}
+
+<h2>apagar</h2>
+
+<h3>Voc&ecirc; tem certeza de que deseja apagar o filme?</h3>
+<div>
+    <h4>Filme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DataEstreia)*@
+            Estreia
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataEstreia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @*@Html.DisplayNameFor(model => model.NumPremios)*@
+            Pr&ecirc;mios
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumPremios)
+        </dd>
+        <dt>
+            @*@Html.DisplayNameFor(model => model.TwoLetterISOLanguageName)*@
+            Idioma (ISO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TwoLetterISOLanguageName)
+        </dd>
+        <dt>
+            @*@Html.DisplayNameFor(model => model._genero)*@
+            G&ecirc;nero
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model._genero)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Apagar" class="btn btn-default" /> |
+            <a asp-action="Index">Voltar para lista</a>
+        </div>
+    </form>
+</div>

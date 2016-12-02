@@ -18,6 +18,10 @@ namespace Locadora.Controllers
         }
         public IActionResult Index()
         {
+            CountClientes();
+            CountMidias();
+            CountMidiasEmprestadas();
+            FaturamentoAteUltimaSemana();
             return View();
         }
 
@@ -59,6 +63,18 @@ namespace Locadora.Controllers
                          select m);
 
             ViewData["countMidiasEmprestadas"] = q.Count();
+
+            return View("Index");
+        }
+
+        public IActionResult FaturamentoAteUltimaSemana()
+        {
+            var q = (from m in _ctx.Midia
+                     join e in _ctx.Emprestimo on m.Id equals e.MidiaId
+                     where e.DataDevolucao.CompareTo(DateTime.Today.AddDays(-7)) >= 0
+                     select m);
+
+            ViewData["faturamentoAteUltimaSemana"] = q.Sum(x => x.Preco);
 
             return View("Index");
         }
