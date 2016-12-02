@@ -2,10 +2,11 @@
 
 @{
     ViewData["Title"] = "Index";
+
 }
 
 <h2>Index</h2>
-
+<h3>Average =@Html.TextBox(ViewData["average"] == null? "" : ViewData["average"])</h3>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
