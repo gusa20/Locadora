@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Locadora.Models
         public String Nome { get; set; }
         public DateTime DataAdesao { get; set; }
         public StatusCliente _statusCliente { get;set; }
+        [JsonIgnore]
         public virtual ICollection<Emprestimo> Emprestimos { get; set; }
         public enum StatusCliente
         {
