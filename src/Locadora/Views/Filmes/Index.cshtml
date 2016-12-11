@@ -1,31 +1,35 @@
 @model IEnumerable<Locadora.Models.Filme>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Filmes do acervo";
 }
 
-<h2>Index</h2>
+<h2>Filmes</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p align="center">
+    <a class="btn btn-primary" asp-action="Create">Cadastrar Novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DataEstreia)
+                @*@Html.DisplayNameFor(model => model.DataEstreia)*@
+                Data de Estreia
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumPremios)
+                @*@Html.DisplayNameFor(model => model.NumPremios)*@
+                Pr&ecirc;mios
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TwoLetterISOLanguageName)
+                @*@Html.DisplayNameFor(model => model.TwoLetterISOLanguageName)*@
+                Idioma (Sigla)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model._genero)
+                @*@Html.DisplayNameFor(model => model._genero)*@
+                G&ecirc;nero
             </th>
             <th></th>
         </tr>
@@ -49,9 +53,9 @@
                 @Html.DisplayFor(modelItem => item._genero)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>
 }

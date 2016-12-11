@@ -156,5 +156,14 @@ namespace Locadora.Controllers
         {
             return _context.Filme.Any(e => e.Id == id);
         }
+
+        //public IActionResult FilmesPorGenero()
+        //{
+        //    //var q = (from f in _context.Filme
+        //    //       group f by f._genero into d
+        //    //     select d);
+        //    var grouped = _context.Filme.GroupBy(u => u._genero).Select(t =>  new List<Filme>(t));
+        //    return View("Index", grouped.ToList());
+        //}
     }
 }

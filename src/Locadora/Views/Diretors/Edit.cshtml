@@ -1,55 +1,59 @@
 @model Locadora.Models.Diretor
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar diretor";
 }
 
-<h2>Edit</h2>
+<h2>Editar diretor</h2>
 
 <form asp-action="Edit">
     <div class="form-horizontal">
-        <h4>Diretor</h4>
+        <h4>Ator</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Id" />
         <div class="form-group">
-            <label asp-for="DataPrimeiroFilme" class="col-md-2 control-label"></label>
+            <label asp-for="DataPrimeiroFilme" class="hidden col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="DataPrimeiroFilme" class="form-control" />
+                <label>Data do primeiro filme</label>
+                <input asp-for="DataPrimeiroFilme" class="form-control" type="date" />
                 <span asp-validation-for="DataPrimeiroFilme" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="DataUltimoFilme" class="col-md-2 control-label"></label>
+            <label asp-for="DataUltimoFilme" class="hidden col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="DataUltimoFilme" class="form-control" />
+                <label>Data do &uacute;ltimo filme</label>
+                <input asp-for="DataUltimoFilme" class="form-control" type="date" />
                 <span asp-validation-for="DataUltimoFilme" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Nome" class="col-md-2 control-label"></label>
+            <label asp-for="Nome" class="hidden col-md-2 control-label"></label>
             <div class="col-md-10">
+                <label>Nome</label>
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="NumPremios" class="col-md-2 control-label"></label>
+            <label asp-for="NumPremios" class="hidden col-md-2 control-label"></label>
             <div class="col-md-10">
+                <label>Pr&ecirc;mios</label>
                 <input asp-for="NumPremios" class="form-control" />
                 <span asp-validation-for="NumPremios" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Atualizar" class="btn btn-default" />
             </div>
         </div>
     </div>
 </form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para lista</a>
 </div>
 
 @section Scripts {

@@ -1,53 +1,57 @@
 @model IEnumerable<Locadora.Models.Diretor>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Diretores";
 }
 
-<h2>Index</h2>
+<h2>Diretores</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p align="center">
+    <a class="btn btn-primary" asp-action="Create">Novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DataPrimeiroFilme)
+                @*@Html.DisplayNameFor(model => model.DataPrimeiroFilme)*@
+                Primeiro Filme
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataUltimoFilme)
+                @*@Html.DisplayNameFor(model => model.DataUltimoFilme)*@
+                &Uacute;ltimo Filme
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumPremios)
+                @*@Html.DisplayNameFor(model => model.NumPremios)*@
+                Pr&ecirc;mios
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataPrimeiroFilme)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataUltimoFilme)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumPremios)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataPrimeiroFilme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataUltimoFilme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumPremios)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                    <a asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

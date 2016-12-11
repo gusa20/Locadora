@@ -6,19 +6,21 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Voc&ecirc; tem certeza de que deseja apagar o diretor?</h3>
 <div>
-    <h4>Diretor</h4>
+    <h4>Ator</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.DataPrimeiroFilme)
+            @*@Html.DisplayNameFor(model => model.DataPrimeiroFilme)*@
+            Primeiro filme
         </dt>
         <dd>
             @Html.DisplayFor(model => model.DataPrimeiroFilme)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DataUltimoFilme)
+            @*@Html.DisplayNameFor(model => model.DataUltimoFilme)*@
+            &Uacute;ltimo filme
         </dt>
         <dd>
             @Html.DisplayFor(model => model.DataUltimoFilme)
@@ -30,17 +32,18 @@
             @Html.DisplayFor(model => model.Nome)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.NumPremios)
+            @*@Html.DisplayNameFor(model => model.NumPremios)*@
+            Pr&ecirc;mios
         </dt>
         <dd>
             @Html.DisplayFor(model => model.NumPremios)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
+            <input type="submit" value="Apagar" class="btn btn-default" /> |
+            <a asp-action="Index">Voltar para lista</a>
         </div>
     </form>
 </div>
