@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -18,15 +19,20 @@ namespace Locadora.Models
             ACAO, COMEDIA, ROMANCE, DRAMA, DOCUMENTARIO
         }
         public int EstudioId { get; set; }
+        [JsonIgnore]
         public virtual Estudio Estudio { get; set; }
         public int DiretorId { get; set; }
+        [JsonIgnore]
         public virtual Diretor Diretor { get; set; }
+        [JsonIgnore]
         public CultureInfo Idioma { get; set; }
+        [JsonIgnore]
         public string TwoLetterISOLanguageName
         {
             get { return Idioma == null ? null : Idioma.TwoLetterISOLanguageName; }
             set { Idioma = new CultureInfo(value); }
         }
+        [JsonIgnore]
         public virtual ICollection<Midia> Midias { get; set; }
     }
 }

@@ -234,10 +234,12 @@ C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locador
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Startup.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\AccountController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\AtorsController.cs
+C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\ClientesAPIController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\ClientesController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\DiretorsController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\EmprestimoesController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\EstudiosController.cs
+C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\FilmesAPIController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\FilmesController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\HomeController.cs
 C:\Users\Luiz Gustavo\Documents\Visual Studio 2015\Projects\Locadora\src\Locadora\Controllers\ManageController.cs
